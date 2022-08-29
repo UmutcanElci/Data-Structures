@@ -38,6 +38,7 @@ public class Introduction {
     Statik veri yapıları sabit sayıda veri öğesi depolaması yapar önceden gelen verilerin boyutu bellidir ve ona göre bir yer bırakılır.
     Dinamik veri yapılarında veri sayısını önceden bilmeyiz, bu da bellek sabit olamdığından gelen verinin bellek sınırını taşma olasılığı veya
     veri için açılmış olan belleğin boş olması ile sonuçlanır. Bunun içni yazılımcı verileri ve belleği kontrol etmelidir.
+
     1-Static
     -Array
     In static linear data structures sizes and structures associated with memory locations are fixed at a compiled time.
