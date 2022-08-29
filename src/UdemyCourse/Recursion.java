@@ -7,6 +7,7 @@ public class Recursion {
     Recursion yenileme demek ve preblemimizi aynı fonksiyonu tekrar tekrar çağırarak küçük hale getirmek diyebiliriz. Aynı kodu çalıştırırız kontrol ederiz yoksa
     bir eksiltir tekrar çalıştırırız. Örnek Matruşka bebek oyuncağı olabilir:
      */
+
     public static void openRussianDoll(int dollNum){
         if(dollNum == 1){
             System.out.println("All dolls are opened");
@@ -27,5 +28,5 @@ public class Recursion {
     2)The prominent usage of recursion in data structures like tree and graphs
     3)It is used in many algorithms (Divide and conquer,greedy,dynamic)
      */
-    
+
 }
