@@ -2,6 +2,7 @@ package UdemyCourse;
 
 public class Introduction {
     //What is data Structure
+
     /*
     Data Structures are different ways of organizing data on your computer, that can be used effectively
     Verileri bir bakıma düzenlemek diyebiliriz düzenli olan veriler arasında gezmek ve istediğimiz veriyi çekmek daha kolay basit Veri yapıları anlamı
@@ -10,6 +11,7 @@ public class Introduction {
     Data Structures = Library
     Algorithm = find book
      */
+
     //What is algorithm
     /*
     Algorithms are set of instructions to perform a task or action
@@ -20,6 +22,7 @@ public class Introduction {
      */
     //Types of Data Structures
     /*
+
     We can grouped into two basic types
     1) Primitive Data Structures
     -Integer
