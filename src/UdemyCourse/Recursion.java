@@ -83,6 +83,7 @@ public class Recursion {
     So to prevent these cases we need to make sure that our N is always positive integer number.
      */
 
+
     public int factorial(int n){
         //Important to find if the code infinite if the code works fine it's not mean it is not infinite look for step 3
         if(n<1){
@@ -120,6 +121,123 @@ public class Recursion {
         }
         else {
             return fibonacci(n-1) + fibonacci(n-2);
+        }
+    }
+
+/*
+    //Question 1 - Sum of Digits (Positive integer)
+
+    //Step 1 : Recursive case - the flow
+
+    10 : 10/10 = 1 and remainder = 0
+    54 : 54/10 = 5 and remainder = 4
+    112 : 112/10 = 11 and remainder = 2
+    f(n) = n%10 + f(n/10)
+
+    //Step 2 : Base case - the stopping criterion
+    - n = 0
+
+    //Step 3 : Unintentional case - the constraint
+    - SumOfDigits(-11) ??
+*/
+    public int SumOfDigits(int n){
+        if (n<0){
+            return -1;
+        }
+        if (n == 0 ){
+            return 0;
+        }
+        else {
+            return n % 10 + SumOfDigits(n / 10);
+        }
+    }
+
+    /*
+    Question 2 - Power
+
+    Step 1 : Recursive case - the flow
+    x^n =x*x*x(n times)
+    x^n = x*x^n-1
+
+    Step 2 : Base case - the stopping criterion
+    - n = 0
+    - n = 1
+
+    Step 3 : Unintentional case - the constraint
+    - power(2,1.2) ??
+    - power(2,-1) ??
+     */
+
+    public int power(int x, int n){
+        if(x == 0){
+            return 0;
+        } else if (n == 0) {
+            return 1;
+        } else if (n == 1) {
+            return x;
+        } else if (n<0) {
+            return -1;
+        } else {
+            return x * power(x, n - 1);
+        }
+    }
+
+    /*
+    Question 3 - GCD(Greatest Common Divisor of two numbers)
+
+    Step 1 : Recursive case - the flow
+    gcd(8,12) = 4
+    8 = 2*2*2
+    12 = 2*2*3
+    Euclidean algorithm
+    gcd(48,12)
+    Step 1 : 48/18 = 2 remainder 12
+    Step 2 : 18/12 = 1 remainder 6
+    Step 3 : 12/6 = 2 remainder 0
+    gcd(a , 0) = a
+    gcd(a,b) = gcd(b, a mod b)
+
+    Step 2 : Base case - the stopping criterion
+    - b = 0
+
+    Step 3 : Unintentional case - the constraint
+    - must be positive number
+     */
+
+    public int gcd(int a , int b){
+        if(a<0 || b<0){
+            return -1;
+        }
+        if(b == 0){
+            return a;
+        }
+        else {
+            return gcd(b, a % b);
+        }
+    }
+
+    /*
+    Question 4 - Decimal to Binary
+
+    Step 1 : Recursive case - the flow
+    - Divide the number by 2
+    - then Get the integer quotient for the next iteration
+    - Finally get the remainder for the binary digit, repeat the steps until quotient is 0
+
+    Step 2 : Base case - the stopping criterion
+    - n = 0
+
+    Step 3 : Unintentional case - the constraint
+    - n < 0
+    - n != float
+     */
+
+    public int decimalToBinary(int n){
+        if(n == 0){
+            return 0;
+        }
+        else {
+            return n % 2 + 10 * decimalToBinary(n / 2);
         }
     }
 }
