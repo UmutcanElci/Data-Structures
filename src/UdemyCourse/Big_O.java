@@ -37,6 +37,42 @@ public class Big_O {
     Ve araştırdım evet 3 tane var şimdi Big O dediğimz basitçe istenilen zamana(İlla zaman olması gerekmiyor veri de olabilir ya da başka bişey de) eşit veya büyük olursa yani
     Average ve  Worst. Big Omega istenilen zamana yine eşit ya da küçük Best ve Average.Big Theta is tam isten,ilen zaman için kullanılıyor Average case. Şu an anladığım bunlar.
 
+    Most Common Time Complexities
+    - O(1) Constant time : Accessing a specific element in array it doesn't matter that array has 10 or more indices we are always looking for one value.
+
+    - O(N) Linear time : Loop through array elements the time complexity will grow in direct proportion of size of the input data.
+
+    - O(LogN) Logarithmic time : Find element in sorted array same as linear with little change that refers to the algorithm that runs in proportionally to the
+    logarithmic of the input(Binary search).
+
+    - O(N^2) Quadratic time : Looking every index in the array twice directly proportional to the square size of input dataset.
+
+    - O(2^N) Exponential time : Double recursion in Fibonacci denotes an algorithm whose growth doubles within each addition  to the input size.
+
+
+    Space Complexity
+
+    Space Complexity is a measure of amount of working storage an algorithm needs. That means how much memory in the worst case is needed at any point in the algorithm.
+
+    Drop Constants and Non Dominant Terms
+
+    Drop Constants and Non Dominant Terms means that we can easily eliminate some values from asymptotic analysis
+    - So this means that we drop constant:
+    - We can write O(2N) --> O(N)
+    - Drop Non dominant terms:
+    - We can write O(N^2 + N) --> O(N^2)
+
+    So why we removing this ?
+
+    - It is very possible that O(N) code is faster than O(1) code for specific inputs.
+    - Different computers with different architectures have different constant factors.
+    - Different algorithms with the same basic idea and computational complexity might have slightly different constants.
+
+    How to measure the code using Big O ?
+    How to measure R    ecursive Algorithm ?
+    How to measure Recursive Algorithm with multiple calls ?
+    --NOTİON!
+
 
 
      */
