@@ -2,7 +2,7 @@ package UdemyCourse;
 
 public class Arrays {
     public int[] arr = null;
-
+    public int[][] arr2 = null;
     /*
     Arrays are very powerful data structures that stores list of elements.
     - The size of array cannot be changed
@@ -92,7 +92,6 @@ public class Arrays {
                 }
             }
     }
-
     /*
     Delete Array Element
      */
@@ -105,6 +104,67 @@ public class Arrays {
         }
     }
 
+
+    /*
+    Create Two Dimensional Array(I visualize at Notion)
+
+    An array with a bunch of values having been declared with double index.
+    a[i][j] = i and j between 0 and n(thing like int array)
+
+    What is happening to memory then, all at Notion again.
+    Steps to create array:
+    Step 1 - Declare
+    int[][] int2DArray;
+    Step 2 - Instantiate
+    int2DArray = new int[2][2]
+    Step 3 - Initialize
+    int2DArray[0][0] = 1;
+
+    To print we use Arrays.deepToString method(Or you for loop like I always do)
+
+
+    Insertion - Two Dimensional Array
+
+    Same as the one dimensional array
+
+     */
+    public void insertValueInThe2DArray(int row, int col,int value){
+        try {
+            if(arr2[row][col] == Integer.MIN_VALUE){
+                arr2[row][col] = value;
+                System.out.println("The value is successfully inserted");
+            }else {
+                System.out.println("This cell is already occupied");
+            }
+        }catch (ArrayIndexOutOfBoundsException e){
+            System.out.println("Invalid index for 2D array");
+        }
+    }
+
+    /*
+    Accessing Two Dimensional Array
+     */
+
+    public void accessCell(int row,int col){
+        System.out.println("\n Accessing Row" + row + "Col  number "+ col);
+        try {
+            System.out.println("Cell value is " + arr2[row][col]);
+        }catch (ArrayIndexOutOfBoundsException e){
+            System.out.println("Invalid index for 2D array");
+        }
+    }
+
+    /*
+    When to use/avoid Arrays
+
+    When to use
+    - To store multiple variables of same data type
+    - Random access
+
+   When to avoid
+   - Same data type elements
+   - Reserve memory(Whenever you create an array with the size of default size you cannot exceed)
+     */
 }
 
 
