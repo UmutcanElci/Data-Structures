@@ -1,4 +1,190 @@
 package Questions;
 
+import jdk.jshell.execution.StreamingExecutionControl;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class ArrayQuestions {
+    /*
+    Find Number of Days Above Average Temperature
+
+    - How many day's temperature?
+    - Day 1's high temp: 1
+    - Day 2's high temp: 2
+    - Output Average = 1.5 - 1 Day(s) above average
+     */
+
+    public void averageTemperatureArray(){
+        int row,temp,sum = 0;
+        double avr;
+        Scanner input = new Scanner(System.in);
+        System.out.println("How many day's : ");
+        row = input.nextInt();
+        int arr[] = new int[row];
+        for (int i = 0; i<row;i++){
+            System.out.print("Day "+ (i+1) +"'s high temp : ");
+            temp = input.nextInt();
+            arr[i] = temp;
+            sum += temp;
+        }
+        avr = (double) sum/row;
+        System.out.println("Output Average = "+ avr);
+        for(int i = 0; i<row; i++){
+            if(arr[i]> avr){
+                System.out.println((i+1)+" Day(s) above average");
+            }
+        }
+    }
+
+    /*
+    Find the missing number in an integer array of 1 to 10.
+
+    Example for 10 elements
+
+    int intArray[] = {1, 2, 3, 4, 5, 6, 8, 9, 10};
+    missingNumber(intArray); // 7
+
+    the solution logic is like if there is 10 elements
+    1,2,3,4,5,6,7,8,9,10
+    their sum is 55
+    if one number is missing like 7 their new sum is 48
+    So when we subtract the two sum we cna find the missing number
+    And to find the sum we use n(n+1)/2 equation
+     */
+    public void missingNumber(int[] intArray) {
+        // TODO
+        int sumLenght = 0;
+        int sumArray = 0;
+        for(int i : intArray){
+            sumArray+=i;
+        }
+        sumLenght = 10*(10+1)/2;
+        int diff = sumLenght-sumArray;
+        System.out.println("Missing Number is " + diff);
+    }
+
+    /*
+    Write a program to find all pairs of integers whose sum is equal to a given number.
+
+    Examples
+
+     Input: nums = [2,7,11,15], target = 9
+     Output: [0,1]
+     Output: Because nums[0] + nums[1] == 9, we return [0, 1]
+
+    Input: nums = [3,2,4], target = 6
+    Output: [1,2]
+     */
+
+    public int[] twoSum(int[] nums, int target) {
+        //TODO
+        for(int i = 0; i<nums.length;i++){
+            for (int j = i+1; j< nums.length;j++){
+                if(nums[i] + nums[j] == target){
+                    System.out.println("["+i+", "+j+"]");
+                }
+            }
+        }
+        throw new IllegalArgumentException("No solution found");
+    }
+
+    /*
+    Write a program to check if an array contains a number in Java.
+
+    int[] intArray = {1,2,3,4,5,6};
+    searchInArray(intArray, 6); // 5
+     */
+
+    public void searchInArray(int[] intArray, int valueToSearch) {
+        // TODO
+        for(int i = 0; i<intArray.length;i++){
+            if(intArray[i] == valueToSearch){
+               System.out.println("Value is found at hte index of "+i);
+            }
+        }
+    }
+
+    /*
+    How to find maximum product of two integers in the array where all elements are positive.
+
+    int[] intArray = {10,20,30,40,50};
+    maxProduct(intArray) // (40,50)
+     */
+
+    public String maxProduct(int[] intArray) {
+        // TODO
+        int first,second;
+        first = 0;
+        second = 0;
+        for (int i = 0; i< intArray.length;i++){
+            if(intArray[i]>first){
+                first = intArray[i];
+            }
+        }
+        for (int j = 0; j<intArray.length;j++){
+            if(intArray[j] != first && intArray[j]>second){
+                second = intArray[j];
+            }
+        }
+        String pairs = Integer.toString(first) + "," + Integer.toString(second);
+        return pairs;
+    }
+
+    /*
+    Write a program to check if an array is unique or not.(Any repeated values!)
+
+    int[] intArray = {1,2,3,4,5,6};
+    isUnique(intArray) // true
+     */
+
+    public boolean isUnique(int[] intArray) {
+        // TODO
+        for (int i = 0; i< intArray.length;i++){
+            for (int j = i+1 ; j< intArray.length;j++){
+                if(intArray[i] == intArray[j]){
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    /*
+    Your are given two integer arrays. Write a program to check if they are permutation of each other.(Check two array values are the same or not)
+
+    int[] array1 = {1,2,3,4,5};
+    int[] array2 = {5,1,2,3,4};
+    permutation(array1, array2)
+     */
+
+    public boolean permutation(int[] array1, int[] array2){
+        // TODO
+        int sum = 0;
+        int sum2 = 0;
+        for(int i = 0; i<array2.length; i++){
+            sum += array2[i];
+        }
+        for (int j = 0; j<array1.length;j++){
+            sum2 += array1[j];
+        }
+        if(sum != sum2){
+            return false;
+        }
+        return true;
+    }
+
+    /*
+    Given an image represented by an NxN matrix write a method to rotate the image by 90 degrees.
+     */
+
+    public boolean rotateMatrix(int[][] matrix) {
+        // TODO
+        for(int i = 2; i<3;i++){
+            for(int j = 2;j<=0;j--){
+
+            }
+        }
+    }
+
 }
