@@ -18,6 +18,6 @@ public class Main {
         System.out.println(ts);
         System.out.print("");
         System.out.print("HElloe");
-        System.out.print("Boom");
+        System.out.print("HHHHHHH");
     }
 }
