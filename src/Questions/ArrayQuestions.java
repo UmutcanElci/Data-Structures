@@ -180,11 +180,52 @@ public class ArrayQuestions {
 
     public boolean rotateMatrix(int[][] matrix) {
         // TODO
-        for(int i = 2; i<3;i++){
-            for(int j = 2;j<=0;j--){
-
+        //The logic to solve we ue loop and 5 variables:
+        /*
+         for = 0 to n 
+         temp = top[i]
+         top[i] = left[i]
+         left[i] = bottom[i]
+         bottom[i] = right[i]
+         right[i] = temp
+         Ofcourse there is different solution to this problem but that is the most usefull one 
+         I will add more detailed to Notion!
+         */
+        if(matrix.length ==0 || matrix.length != matrix[0].length) return false;
+        int n = matrix.length;
+        for(int layer = 0; layer< n/2; layer++){
+            int first = layer;
+            int last = n - 1 -layer;
+            for(int i = first; i<last; i++){
+                int offset = i -first;
+                int top = matrix[first][i];
+                matrix[first][i] = matrix[last - offset][first];
+                matrix[last - offset][first] = matrix[last][last-offset];
+                matrix[last][last-offset] = matrix[i][last];
+                matrix[i][last] = top;
             }
         }
+        return true;
+        //Well I don't understand that all is so complicated like it's easy to understand the logic you know temp top bottom thing 
+        //To understand that I will try to sketch casue I have a lot of questions here and look for more solutions
+        //MORE IN NOTİON!
     }
+
+
+    /*
+     * Write a function called middle that takes a list and returns a new list that contains all but the first and last elements.
+
+      myArray = [1, 2, 3, 4]
+      middle(myArray)  # [2,3]
+
+     */
+
+     public class MiddleValue {
+    static int[] middle(int[] arr) {
+        // TODO
+        return middle[];
+    }
+
+}
 
 }
