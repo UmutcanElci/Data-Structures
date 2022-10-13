@@ -23,7 +23,7 @@ public class ArrayQuestions {
         row = input.nextInt();
         int arr[] = new int[row];
         for (int i = 0; i<row;i++){
-            System.out.print("Day "+ (i+1) +"'s high temp : ");
+            System.out.print("Day "+ (i+1) +"'s high temperature : ");
             temp = input.nextInt();
             arr[i] = temp;
             sum += temp;
@@ -31,7 +31,7 @@ public class ArrayQuestions {
         avr = (double) sum/row;
         System.out.println("Output Average = "+ avr);
         for(int i = 0; i<row; i++){
-            if(arr[i]> avr){
+            if(arr[i]> avr){//Fix it 
                 System.out.println((i+1)+" Day(s) above average");
             }
         }
@@ -123,7 +123,7 @@ public class ArrayQuestions {
             }
         }
         for (int j = 0; j<intArray.length;j++){
-            if(intArray[j] != first && intArray[j]>second){
+            if(intArray[j] != first && intArray[j]>second){//Explain it! Notion I mean
                 second = intArray[j];
             }
         }
@@ -206,9 +206,22 @@ public class ArrayQuestions {
             }
         }
         return true;
-        //Well I don't understand that all is so complicated like it's easy to understand the logic you know temp top bottom thing 
+        //(Well I don't understand that all is so complicated like it's easy to understand the logic you know temp top bottom thing) SOLVED WİTH TEARS AND ....
         //To understand that I will try to sketch casue I have a lot of questions here and look for more solutions
-        //MORE IN NOTİON!
+        /*
+        Now lets look one by one: Our problem is we have a 2D array that the array values given by us but we can't think like that right now
+        So we want to rotate this 2D array by 90 degrees let's visualize it:
+        1 2 3           7 4 1
+        4 5 6    ---->  8 5 2  so this is a classic problem that's mean there's a fix solution that everbody use and it's like most practical solution
+        7 8 9           9 6 3  
+
+        Alrgiht we need to reach our values as we know becasue of we dealing with 2D array we first reach out the first value [0][0] and thats one
+        When I look the solutions of this problem this is the most logical for me casue I can see what's really happening but ofcourse for understanding we need to look one by one
+        We separate like top left right and bottom let's visulize now:
+        top = 1 left = 7 right = 3 bottom = 9 and ofcourse we have temp to hold the one value becasue when we change rotate one will be the same as the other
+        so first we give temp = top , top = left , left = bottom , bottom = right, right = temp
+        
+         */ 
     }
 
 
@@ -223,7 +236,8 @@ public class ArrayQuestions {
      public class MiddleValue {
     static int[] middle(int[] arr) {
         // TODO
-        return middle[];
+        return MiddleValue[];
+        
     }
 
 }
