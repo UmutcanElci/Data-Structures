@@ -220,6 +220,50 @@ public class ArrayQuestions {
         We separate like top left right and bottom let's visulize now:
         top = 1 left = 7 right = 3 bottom = 9 and ofcourse we have temp to hold the one value becasue when we change rotate one will be the same as the other
         so first we give temp = top , top = left , left = bottom , bottom = right, right = temp
+
+        so we understand how we rotate but how we give the correct index value every time ?
+        I mean the array size can be change every time when we input 
+        Well I still learning you know this solution is greate but to understand we need to write again
+
+        int n = matrix.length;
+        for(int layer = 0; layer< n/2; layer++){
+            int first = layer;
+            int last = n - 1 -layer;
+
+            So let's analyze here we have int n variable that hold the matrix length so if we have [3][3] array lenght is 3 [7][7] lenght 7 easy
+            Soooo n = 3 , good we have a loop there starts at 0 to n/2 thats mean 3/2 but because of the integer 3/2 equal to = 1
+            Thats the break point well if we have the [3][3] array so our indexes are start at 0 and end to 2, well I firstly don't understand that 
+            but we need to keep going.
+            when our layer = 0 , int first  = 0 , int last = 3 - 1 - layer = 2 
+            first = 0 , layer = 2 so that's our first loop 
+
+            Our second loop is 
+            for(int i = first; i<last; i++)
+            start with first to the last (int i = 0; i<2; i++) don't forget when this loop ends first value changed to 1 
+
+            Ok almost the last part we now start to rotate
+              int offset = i -first;
+                int top = matrix[first][i];
+                matrix[first][i] = matrix[last - offset][first];
+                matrix[last - offset][first] = matrix[last][last-offset];
+                matrix[last][last-offset] = matrix[i][last];
+                matrix[i][last] = top;
+
+            let's look one by one (don't forget the values loop start with first = 0 , last = 2)
+            offset = 0 - 0 (Because i = 0 and first = 0 start of the loop  offset = 0)
+            top = arr[0][0] ([first][i])
+            arr[0][0] = arr[2][0] ([first][i]  =  [last - offset][first]) top = left
+            arr[2][0] = arr[2][2] ([last - offset][first] = matrix[last][last-offset]) left = bottom
+            arr[2][2] = arr[0][2] ([last][last-offset] = matrix[i][last]) bottom = right 
+            arr[0][2] = top (top = arr[0][0]) right = temp(top or lets say our value holder)
+
+            When loop increases by 1 
+            top = arr[1][1]
+            arr[1][1] = arr[0][1]
+            arr[0][1] = arr[1][0]
+            arr[1][0] = arr[1][1]
+            arr[1][1] = top 
+
         
          */ 
     }
