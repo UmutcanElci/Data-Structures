@@ -13,8 +13,16 @@ public class Main {
         //System.out.println(pairs);
         //boolean equal = test.isUnique(intArray);
         //System.out.println(equal);
-
+        int doubleArray[][] ={{1,2,3},{4,5,6},{7,8,9}};
         boolean ts = test.permutation(intArray,intArray2);
         System.out.println(ts);
+        System.out.println(doubleArray.length/2);
+        //
+        //kkkkkkkkkkkkkkkkkk
+
+
+
+        ///////////////////////////
+        
     }
 }
