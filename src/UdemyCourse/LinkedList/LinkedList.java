@@ -65,8 +65,11 @@ public class LinkedList{
       - Create a blank Node and assing a value to it and reference to null
       - Link Head and Tail with these Node
       */
+        /*
       SinglyLinkedList lss = new SinglyLinkedList();
       lss.createSinglyLinkedList(5);
+
+         */
 
       /*
        Insertion to Linked List 
