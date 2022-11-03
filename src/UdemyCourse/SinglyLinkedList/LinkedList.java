@@ -104,7 +104,7 @@ public class LinkedList {
 
     //Search for a node
 
-    boolean searchNode(int nodeValue){
+    public boolean searchNode(int nodeValue){
         if(head != null){
             Node tempNode = head;
             for(int i = 0; i<size; i++){
@@ -119,5 +119,13 @@ public class LinkedList {
         return false;
     }
 
+    //Deletion of a Node from Singly Linked List
+    /*
+    - Deleting the first node
+    - Deleting any given node
+    - Deleting the last node
+     */
+
+    
 }
 
