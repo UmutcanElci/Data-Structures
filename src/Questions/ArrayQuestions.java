@@ -1,8 +1,5 @@
 package Questions;
 
-import jdk.jshell.execution.StreamingExecutionControl;
-
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class ArrayQuestions {
@@ -96,13 +93,14 @@ public class ArrayQuestions {
     searchInArray(intArray, 6); // 5
      */
 
-    public void searchInArray(int[] intArray, int valueToSearch) {
+    public boolean searchInArray(int[] intArray, int valueToSearch) {
         // TODO
         for(int i = 0; i<intArray.length;i++){
             if(intArray[i] == valueToSearch){
                System.out.println("Value is found at hte index of "+i);
             }
         }
+        return false;
     }
 
     /*
@@ -277,6 +275,7 @@ public class ArrayQuestions {
 
      */
 
+    /*
      public class MiddleValue {
     static int[] middle(int[] arr) {
         // TODO
@@ -284,6 +283,8 @@ public class ArrayQuestions {
         
     }
 
-}
+     */
+
+
 
 }
