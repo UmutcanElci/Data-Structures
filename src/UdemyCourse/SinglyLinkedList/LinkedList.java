@@ -126,6 +126,46 @@ public class LinkedList {
     - Deleting the last node
      */
 
-    
+    public void deletionOfNode(int location){
+        if(head == null){
+            System.out.println("The Linked list not exist");
+            return;
+        }else if(location == 0){
+            head = head.next;
+            size--;
+            if(size == 0){
+                tail = null;
+            }
+        } else if (location >= size) {
+            Node tempNode = head;
+            for(int i = 0; i<size-1; i++){
+                tempNode = tempNode.next;
+            }
+            if(tempNode == head){
+                head = null;
+                tail = null;
+                size--;
+                return;
+            }
+            tempNode.next = null;
+            tail = tempNode;
+            size--;
+        }else {
+            Node tempNode = head;
+            for (int i = 0; i<location-1; i++){
+                tempNode = tempNode.next;
+            }
+            tempNode.next = tempNode.next.next;
+            size--;
+        }
+    }
+
+    //Delete Entire SinglyLinkedList
+    public void deleteSLL(){
+        head = null;
+        tail = null;
+        System.out.println("SLL Deleted !");
+    }
+
 }
 
