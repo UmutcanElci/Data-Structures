@@ -1,5 +1,6 @@
 
 import UdemyCourse.Big_O;
+import UdemyCourse.CircularSinglyLinkedList.CircularSinglyLinkedList;
 import UdemyCourse.Recursion;
 import Questions.ArrayQuestions;
 import UdemyCourse.SinglyLinkedList.LinkedList;
@@ -20,6 +21,7 @@ public class Main {
         //System.out.println(ts);
 
         //LinkedList
+        /*
         LinkedList sLL =new LinkedList();
         sLL.createSinglyLinkedList(7);
         sLL.insertInLinkedList(4,1);
@@ -27,6 +29,11 @@ public class Main {
         sLL.insertInLinkedList(6,3);
         sLL.insertInLinkedList(12,2);
         sLL.searchNode(12);
+         */
+
+        //Circular Sngly Linked List
+        CircularSinglyLinkedList cSLL = new CircularSinglyLinkedList();
+        cSLL.createCircularSinglyLinkedList(7);
 
     }
 }
